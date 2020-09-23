@@ -1,14 +1,17 @@
 const log = require('./complicated_logger');
 
-const verifyPassword = (input, rules) => {
+const verifyPassword = (input, rules, logger) => {
     const failed = rules.map(rule => rule(input))
     .filter(result => result === false);
-    if (failed.count === 0) {
-        log.info('PASSED');
+    console.log(failed)
+    console.log(failed.count)
+    if (failed.length === 0) {
+        logger.info('PASSED');
         return true;
     }
 
-    log.info('FAIL');
+    logger.info('FAIL');
     return false;
-}    
+}  
+module.exports = {verifyPassword}
 
