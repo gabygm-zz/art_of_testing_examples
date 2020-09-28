@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gabygm/art_of_testing_examples#readme",
   "dependencies": {
-    "jest": "^26.4.2"
+    "jest": "^26.4.2",
+    "lodash": "^4.17.20"
   }
 }
